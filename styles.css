@@ -1,0 +1,102 @@
+:root {
+  --fondo: #0f172a;
+  --tarjeta: #1e293b;
+  --texto: #e2e8f0;
+  --suave: #94a3b8;
+  --acento: #38bdf8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+.menu {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid var(--tarjeta);
+}
+.logo { font-weight: bold; font-size: 1.4rem; color: var(--acento); }
+.menu nav a {
+  color: var(--texto); text-decoration: none; margin-left: 1.5rem;
+}
+.menu nav a:hover { color: var(--acento); }
+.portada {
+  min-height: 80vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e3a5f);
+}
+.portada h1 { font-size: 2.8rem; }
+.puesto { color: var(--suave); font-size: 1.2rem; margin: 1rem 0 2rem; }
+.boton {
+  background: var(--acento); color: var(--fondo);
+  padding: 0.8rem 2rem; border-radius: 30px;
+  text-decoration: none; font-weight: bold;
+}
+.boton:hover { opacity: 0.85; }
+.seccion { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+.seccion h2 {
+  color: var(--acento); font-size: 1.8rem; margin: 1rem 0 1.5rem;
+  border-left: 4px solid var(--acento); padding-left: 0.8rem;
+}
+
+.tarjeta {
+  background: var(--tarjeta);
+  padding: 1.5rem; border-radius: 12px; margin-bottom: 1.2rem;
+  transition: transform 0.2s;
+}
+.tarjeta:hover { transform: translateY(-4px); }
+.tarjeta h3 { margin-bottom: 0.3rem; }
+.detalle { color: var(--suave); font-size: 0.9rem; margin-bottom: 0.8rem; }
+.tarjeta ul { padding-left: 1.2rem; }
+
+.grilla {
+  display: grid; gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.lista-cursos { list-style: none; }
+.lista-cursos li {
+  background: var(--tarjeta); padding: 0.8rem 1.2rem;
+  border-radius: 8px; margin-bottom: 0.6rem;
+}
+
+.etiquetas { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.etiquetas span {
+  border: 1px solid var(--acento); color: var(--acento);
+  padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;
+}
+
+.contacto { text-align: center; }
+.contacto h2 { display: inline-block; }
+.contacto p { font-size: 1.1rem; margin: 0.5rem 0; }
+.contacto a { color: var(--acento); }
+
+footer { text-align: center; padding: 2rem; color: var(--suave); font-size: 0.9rem; }
+@media (max-width: 700px) {
+  .menu { flex-direction: column; gap: 0.5rem; }
+  .menu nav a { margin: 0 0.5rem; font-size: 0.9rem; }
+  .portada h1 { font-size: 2rem; }
+}
+.formulario {
+  max-width: 500px; margin: 2rem auto 0;
+  display: flex; flex-direction: column; text-align: left;
+}
+.formulario label { margin: 0.8rem 0 0.3rem; color: var(--suave); }
+.formulario input, .formulario textarea {
+  padding: 0.7rem; border-radius: 8px; border: 1px solid var(--tarjeta);
+  background: var(--tarjeta); color: var(--texto); font-family: inherit;
+}
+.formulario button {
+  margin-top: 1.2rem; padding: 0.8rem; border: none; border-radius: 30px;
+  background: var(--acento); color: var(--fondo); font-weight: bold; cursor: pointer;
+}
+.formulario button:hover { opacity: 0.85; }
